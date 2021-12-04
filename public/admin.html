@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<script>if (sessionStorage.getItem("usuario") == null){location.replace('index.html');}</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,
+	user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>admin: Caribbean Food Web 1.0</title>
+
+	<!-- Normalize V8.0.1 -->
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- MDBootstrap V5 -->
+	<link rel="stylesheet" href="./css/mdb.min.css">
+
+	<!-- Font Awesome V5.15.1 -->
+	<link rel="stylesheet" href="./css/all.css">
+
+	<!-- General Styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+	<!-- Header -->
+	<header class="row header full-box">
+        <div class="col text-start">
+            <div class="full-box">
+	            <nav class="header-navbar full-box poppins-regular font-weight-bold">
+	                <ul class="list-unstyled full-box">
+	                    <li>
+	                        <a href="index.html" >Inicio<span class="full-box" ></span></a>
+	                    </li>
+	                </ul>
+	            </nav>
+            </div> 
+        </div>
+        <div class="col-auto poppins-regular">
+            <!-- Example split danger button -->
+            <div class="btn-group mt-2">
+                <a href="#" class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden"></span>
+                </a>
+                <a href="#" class="btn rounded-end btn-dark">Menú</a>
+                <ul class="dropdown-menu border-end border-top border-start border-bottom">
+                <li><h6 id="label_nombre_admin" class="text-center mt-2"></h6></li>
+				<li><hr class="dropdown-divider"></li>
+                <li><a id="boton_inicio_admin" class="dropdown-item" href="#">Inicio</a></li>
+                <li><a id="boton_usuarios_admin" class="dropdown-item" href="#">Usuarios</a></li>
+                <li><a id="boton_configuracion_admin" class="dropdown-item disabled" href="#">Configuración</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a id="boton_salir_admin" class="dropdown-item-text" href="#">Salir</a></li>
+                </ul>
+            </div>
+        </div>
+	   
+	</header>
+
+
+	<!-- Content -->
+    <!-- inicio -->
+	<div id="panel_inicio_admin" class="container-fluid container-web-page">
+	    <h3 class="text-center text-uppercase poppins-regular font-weight-bold">Nuestros platillos más populares</h3>
+	    <div class="container-cards full-box">
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="./assets/platillos/rapida.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Comida Rapida</h5>
+	                
+	            </div>
+	            <div class="card-body text-center">
+					
+	                &nbsp; &nbsp;
+	                <a href="details.html" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="./assets/platillos/callejero.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Comida Callejera</h5>
+	                
+	            </div>
+	            <div class="card-body text-center">
+					
+	                &nbsp; &nbsp;
+	                <a href="detailscc .html" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	        <div class="card shadow-1-strong">
+	            <img class="card-img-top" src="./assets/platillos/tradicion.jpg" alt="nombre_platillo">
+	            <div class="card-body text-center">
+	                <h5 class="card-title font-weight-bold">Comida Tradicional</h5>
+	               
+	            </div>
+	            <div class="card-body text-center">
+					
+	                &nbsp; &nbsp;
+	                <a href="detailsct.html" class="btn btn-info btn-sm"><i class="fas fa-utensils fa-fw"></i> &nbsp; Detalles</a>
+	            </div>
+	        </div>
+
+	    </div>
+	    <br>
+	    
+	</div>
+    <!-- usuarios -->
+    <div id="panel_usuarios_admin" class="container-fluid col-12 col-lg-9 container-web-page scroll overflow-auto h-75" hidden>
+        <h1 class="text-center poppins-regular">Usuarios</h1>
+		<h6 class="text-end"><a href="registro.html" class="btn-sm btn-outline-danger w-auto mx-1 fas fa-plus"> Nuevo usuario</a><a id="boton_actualizar_lista" href="#" class="btn-sm btn-outline-info w-auto fas fa-redo-alt"> Actualizar</a></h6>
+        <table class="table table-bordered poppins-regular">
+            <thead class="text-center">
+                <tr>
+                    <th><Strong>#</Strong></th>
+                    <th><strong>Nombre</strong></th>
+                    <th><strong>Correo</strong></th>
+                    <th><strong>Eliminar</strong></th>
+                </tr>
+            </thead>
+            <tbody id="body_tabla_usuarios" class="text-center">
+            </tbody>
+        </table>
+        
+    </div>
+
+	<hr>
+
+	
+	<!-- Footer -->
+	<footer class="footer">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" ></i>Realizado por Grupo 6</h5></li>
+	                    <li> Todos los derechos reservados </li>
+	                </ul>
+	            </div>
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" >Colombia</h5></li>
+	                    <li><i class="fas fa-map-marker-alt fa-fw"></i> Santa Marta, Magdalena</li>
+	                </ul>
+	            </div>
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" >Siguenos en:</h5> </li>
+	                    <li>
+	                        <a href="https://es-la.facebook.com/" class="footer-link" target="_blank" >
+	                            <i class="fab fa-facebook fa-fw"></i> Facebook
+	                        </a>
+	                    </li>
+
+	                    <li>
+	                        <a href="https://www.youtube.com/" class="footer-link" target="_blank" >
+	                            <i class="fab fa-youtube fa-fw"></i>
+	                                Youtube
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+
+	<!-- Sweet Alert V10.13.0 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+
+	<!-- MDBootstrap V5 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	<!-- General scripts -->
+	<script type="module" src="./js/admin.js" ></script>
+</body>
+</html>

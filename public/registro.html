@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,
+	user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Caribbean Food Web 1.0</title>
+
+	<!-- Normalize V8.0.1 -->
+	<link rel="stylesheet" href="./css/normalize.css">
+
+	<!-- MDBootstrap V5 -->
+	<link rel="stylesheet" href="./css/mdb.min.css">
+
+	<!-- Font Awesome V5.15.1 -->
+	<link rel="stylesheet" href="./css/all.css">
+
+	<!-- General Styles -->
+	<link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+	<!-- Header -->
+	<header class="header full-box">
+	    <div class="header-brand text-center full-box">
+	        <a href="index.html">
+	            <img src="./assets/img/logo.png" alt="logo" class="img-fluid">
+	        </a>
+	    </div>
+
+	    <div class="header-options full-box">
+	        <nav class="header-navbar full-box poppins-regular font-weight-bold" >
+	            <ul class="list-unstyled full-box">
+	                <li>
+	                    <a href="index.html" >Inicio<span class="full-box" ></span></a>
+	                </li>
+	                
+	            </ul>
+	        </nav>
+	    
+	                <hr>
+	                            
+	            </div>
+	        
+	</header>
+
+
+	<!-- Content -->
+	<div class="banner">
+        <br>
+        <br>
+	    <div class="banner-body container-fluid bg-logIn col-md-6 col-11 h-auto rounded">
+            <h3 class="mt-3 text-dark">Registrarse</h3>
+            <div class="form-floating text-black-50 col-md-7 col-9 mb-3">
+                <input type="email" class="form-control" id="input_correo_registro" placeholder="name@example.com">
+                <label for="input_correo_registro">Correo</label>
+            </div>
+            <div class="form-floating text-black-50 col-md-7 col-9 mb-3">
+                <input type="text" class="form-control" id="input_nombre_registro" placeholder="nombre">
+                <label for="input_nombre_registro">Nombre</label>
+            </div>
+            <div class="form-floating text-black-50 col-md-7 col-9 mb-3">
+                <input type="password" class="form-control" id="input_password_registro" placeholder="Password">
+                <label for="input_password_registro">Contraseña</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check_condiciones_registro">
+                <label class="form-check-label text-black-50" for="check_condiciones_registro">
+                  Aceptar:<a  href="#" id="link_condiciones_registro">T&C</a>
+                </label>
+              </div>
+            <div class="row">
+                <div class="col-6"><a href="#" type="button" class="btn-sm btn-info w-auto mb-5" id="btn_submit_registro">Registrarse</a></div>
+                <div class="col-6"><a href="index.html" type="button" class="btn-sm btn-danger w-auto mb-5">Cancelar</a></div>
+            </div>
+        </div>
+	</div>
+	<!-- Footer -->
+	<footer class="footer">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" ></i>Realizado por Grupo 6</h5></li>
+	                    <li> Todos los derechos reservados </li>
+	                </ul>
+	            </div>
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" >Colombia</h5></li>
+	                    <li><i class="fas fa-map-marker-alt fa-fw"></i> Santa Marta, Magdalena</li>
+	                </ul>
+	            </div>
+	            <div class="col-12 col-md-4">
+	                <ul class="list-unstyled" >
+	                    <li><h5 class="font-weight-bold" >Siguenos en:</h5> </li>
+	                    <li>
+	                        <a href="https://es-la.facebook.com/" class="footer-link" target="_blank" >
+	                            <i class="fab fa-facebook fa-fw"></i> Facebook
+	                        </a>
+	                    </li>
+
+	                    <li>
+	                        <a href="https://www.youtube.com/" class="footer-link" target="_blank" >
+	                            <i class="fab fa-youtube fa-fw"></i>
+	                                Youtube
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	</footer>
+
+    <!-- Sweet Alert V10.13.0 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+
+	<!-- MDBootstrap V5 -->
+	<script src="./js/mdb.min.js" ></script>
+
+	<!-- General scripts -->
+	<script type="module" src="./js/registro.js" ></script>
+</body>
+</html>
